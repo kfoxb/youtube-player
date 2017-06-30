@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './App.css'
 import Search from './components/Search'
+import CurrentVideo from './components/CurrentVideo'
+import VideoList from './components/VideoList'
 
 class App extends Component {
   constructor (props) {
@@ -19,7 +21,11 @@ class App extends Component {
   }
   render () {
     return (
-      <Search searchTerm={this.state.searchTerm} updateSearchTerm={this.updateSearchTerm} />
+      <div>
+        <Search searchTerm={this.state.searchTerm} updateSearchTerm={this.updateSearchTerm} />
+        <CurrentVideo />
+        <VideoList />
+      </div>
     )
   }
 }
