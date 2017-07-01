@@ -3,7 +3,10 @@ import React, { Component } from 'react'
 class VideoListEntry extends Component {
   render () {
     return (
-      <h3>VideoListEntry Component</h3>
+      <div>
+        <h4>{this.props.title}</h4>
+        <img src={this.props.thumbnail} />
+      </div>
     )
   }
 }
